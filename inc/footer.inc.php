@@ -1,6 +1,6 @@
 <footer class="container-fluid pt-5 bg-blue">
     <div class="text-center d-flex flex-column justify-content-center p-0">
-        <p class="p-3 m-0 footer-font-color">&copy;RedYro's Art - <?=date("Y")?> version 1 - <a href="">Mentions légales</a> - <a href="">CGV</a></p>
+        <p class="p-3 m-0 footer-font-color">&copy;RedYro's Art - <?=date("Y")?> <span>version 1 </span> - <a href="">Mentions légales</a> - <a href="">CGV</a></p>
     </div>
     <div class="text-center d-flex align-items-center justify-content-center p-0">
         <div class="m-3 logo-footer">

@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Pour vérifier si des éléments sortent de l'écran : */
+    /* box-shadow: 0 0 0 3px red inset; */
+}
+
+/* Importation des "fonts" */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+@font-face {
+    font-family: JapanWave;
+    src: local("JapanWave"), url(fonts/japan-wave.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Niagato;
+    src: local("Niagato"), url(fonts/Niagato.ttf) format("truetype");
+}
+
+/* Déclaration de variables avec ":root" */
+
+:root{
+    --background-gradient-red-1: linear-gradient(180deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 95%);
+    --background-gradient-red-2: linear-gradient(360deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 95%);
+    --background-gradient-blue-1: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(40,18,107,1) 95%);
+    --background-gradient-blue-2: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(40,18,107,1) 95%);
+    --background-color-black : rgb(0,0,0);
+}
+
+/* Style pour gérer le loader du site */
+
+#loader{
+    position: fixed;
+    z-index: 100000;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999;
+}
+
+.loader-bg{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-black);
+    animation-name: loader-bg; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.logo-loader-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-loader-size{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    animation-name: loader; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.hide-loader{
+    display: none !important;
+}
+
+
+
+@keyframes loader{ /* @keyframes => règle permettant de créer une animation en CSS */
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes loader-bg{
+    0%{
+        opacity: 0.5;
+        background-color: var(--background-color-black);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 50%, rgba(0,0,0,1) 95%);
+    }
+    25%{
+        opacity: 0.5;
+        background-color: var(--background-color-black);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 50%, rgba(0,0,0,1) 95%);
+    }
+    50%{
+        opacity: 1;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 50%, rgba(0,0,0,1) 95%);
+    }
+    75%{
+        opacity: 0.5;
+        background-color: var(--background-color-black);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 50%, rgba(0,0,0,1) 95%);
+    }
+    100%{
+        opacity: 0.5;
+        background-color: var(--background-color-black);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(154,0,0,1) 50%, rgba(0,0,0,1) 95%);
+    }
+}
+
+/* Style pour la navbar */
+
+/* Style pour les logos de la navbar */
+
+.logo{
+    width: 140px;
+    height: 138px;
+    border-radius: 5%;
+    transition: 250ms linear !important;
+}
+
+.logo-show{
+    display: none !important;
+}
+
+.logo:hover{
+    scale: 1.2;
+}
+
+
+/* Style pour les liens de la navbar */
+
+.nav-link-font-color{
+    font-family: "Niagato" !important;
+    color: white !important;
+    transition: 250ms linear !important;
+}
+
+.nav-link-font-color:hover{
+    scale: 1.2;
+}
+
+/* Style pour gérer les dégradés des backgrounds du site */
+
+.bg-red{
+    background: var(--background-gradient-red-1), var(--background-color-black);
+}
+
+.bg-red-2{
+    background: var(--background-gradient-red-2), var(--background-color-black);
+}
+
+.bg-blue{
+    background: var(--background-gradient-blue-1), var(--background-color-black);
+}
+
+.bg-blue-2{
+    background: var(--background-gradient-blue-2), var(--background-color-black);
+}
+
+/* Style pour les titres du site */
+
+.title-style-h1{
+    font-family: "JapanWave" !important;
+    color: white !important;
+    box-shadow:  1px 7px 10px 0px black !important;
+    border-radius: 15px;
+    width: 35%;
+}
+
+.title-style-h1-bis{
+    font-family: "JapanWave" !important;
+    color: white !important;
+    box-shadow:  1px 7px 10px 0px black !important;
+    border-radius: 15px;
+}
+
+.title-style-h2{
+    font-family: "Niagato" !important;
+    color: white !important;
+    box-shadow:  1px 7px 10px 0px black !important;
+    border-radius: 15px;
+    width: 35%;
+}
+
+.title-color-red{
+    background: var(--background-gradient-red-1), var(--background-color-black);
+}
+
+.title-color-blue{
+    background: var(--background-gradient-blue-1), var(--background-color-black);
+}
+
+/* Style pour gérer les boutons du site */
+
+.btn-style{
+    font-family: "Niagato" !important;
+    color: white !important;
+    border-radius: 35px !important;
+    transition: 250ms linear !important;
+}
+
+.btn-color-red{
+    background: var(--background-gradient-red-2), var(--background-color-black) !important;
+}
+
+.btn:hover{
+    background: rgb(233, 0, 0) !important;
+}
+
+.btn-color-blue{
+    background: var(--background-gradient-blue-2), var(--background-color-black) !important;
+}
+
+.btn-color-blue:hover{
+    background: rgb(54, 1, 244) !important;
+}
+
+.btn-size-1{
+    width: 15%;
+}
+
+.btn-size-2{
+    width: 25%;
+}
+
+/* Style pour gérer les paragraphes du site */
+
+.paragraphe-style{
+    font-family: "Cabin" !important;
+    color: white !important;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.paragraphe-color-red{
+    background: var(--background-gradient-red-1), var(--background-color-black);
+}
+
+.paragraphe-color-blue{
+    background: var(--background-gradient-blue-1), var(--background-color-black);
+}
+
+/* Style pour gérer les background des images du site */
+
+.img-size-red-style{
+    background: rgb(233,0,0);
+    background: linear-gradient(90deg, rgba(233,0,0,1) 0%, rgba(19,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(233,0,0,1) 100%);
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(154,0,0,1), black, rgba(154,0,0,1));
+    border-image-slice: 1; 
+}
+
+.img-size-blue-style{
+    background: rgb(54,1,244);
+    background: linear-gradient(90deg, rgba(54,1,244,1) 0%, rgba(19,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(54,1,244,1) 100%);
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(40,18,107,1), black, rgba(40,18,107,1));
+    border-image-slice: 1; 
+}
+
+.img-size-blue-red-style{
+    background: rgb(233,0,0);
+    background: linear-gradient(90deg, rgba(233,0,0,1) 0%, rgba(19,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(54,1,244,1) 100%);
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(154,0,0,1), black, rgba(40,18,107,1));
+    border-image-slice: 1; 
+}
+
+.img-size-blue-red-style-bis{
+    background: rgb(233,0,0);
+    background: linear-gradient(90deg, rgba(54,1,244,1) 0%, rgba(19,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(233,0,0,1) 100%);
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(40,18,107,1), black, rgba(154,0,0,1));
+    border-image-slice: 1; 
+}
+
+/* Style pour gérer les images de l'accueil */
+
+/* Style pour la bannière de la page d'accueil */
+
+.banner-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-img-size{
+    width: 840px;
+    height: 645px;
+    overflow: hidden;
+}
+
+/* Style pour les images aléatoires de la page d'accueil */
+
+.random-img-accueil{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.random-img-accueil-size{
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.random-img-accueil-bis{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.random-img-accueil-bis-size{
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* Style pour gérer le footer */
+
+.footer-font-color{
+    font-family: "Cabin", sans-serif !important;
+    color: white !important;
+}
+
+.footer-font-color a{
+    font-family: "Cabin", sans-serif !important;
+    text-decoration: none !important;
+    color: white !important;
+    transition: 250ms linear !important;
+}
+
+.footer-font-color a:hover{
+    color: rgb(54, 1, 244) !important;
+}
+
+.logo-footer{
+    transition: 250ms linear !important;
+}
+
+.logo-footer:hover{
+    scale: 1.5;
+}
+
+/* Style pour gérer le formulaire d'inscription */
+
+.inscription-text-color{
+    color: rgb(233, 0, 0) !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.inscription-text-color-bis{
+    color: rgb(54, 1, 244) !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.form-inscription-style{
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+/* Style pour gérer le formulaire d'authentification */
+
+.authentification-text-color{
+    color: rgb(233, 0, 0) !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.form-authentification-style{
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+/* Style pour gérer la page Compte */
+
+.compte-style{
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.log-out-compte{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Style gérer le style du logo "se déconnecter" */
+
+.bi-box-arrow-right{
+    font-size: 25px !important;
+    font-weight: bolder;
+}
+
+/* Style pour la photo de profil du compte */
+
+.img-pp{
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    height: 150px;
+    width: 150px;
+    /* background-color: black; */
+    background-image: url(../img/Red_Logo_Test.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Style pour la page Dashboard */
+
+.banner-dashboard-img{
+    height: 100%;
+    width: 100%;
+}
+
+.banner-dashboard-img-size{
+    background: linear-gradient(to right, rgba(40,18,107,1), black, rgb(154,0,0)); 
+    border-radius: 15px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 525px;
+    height: 525px;
+    overflow: hidden;
+}
+
+.dashboard-style{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(40,18,107,1) 50%, rgba(0,0,0,1) 95%);
+    border-color: #fff;
+    border: #fff solid 2px;
+    font-family: 'Cabin' !important;
+}
+
+.dashboard-style hr{
+   color: #fff;
+}
+
+/* Style pour gérer la page Produits du dashboard */
+
+.product-img-dashboard{
+    height: 125px;
+    width: auto;
+}
+
+.table-product-style{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,18,107,1) 50%, rgba(0,0,0,1) 95%);
+    border-color: #fff;
+    border: #fff solid 2px;
+    font-family: 'Cabin' !important;
+    color: #fff;
+}
+
+/* Style pour gérer la page gestion de produits sur le dashboard */
+
+.form-gestion-product-style{
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+/* Style pour gérer la page Users du dashboard */
+
+.table-user-style{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,18,107,1) 50%, rgba(0,0,0,1) 95%);
+    border-color: #fff;
+    border: #fff solid 2px;
+    font-family: 'Cabin' !important;
+    color: #fff;
+    width: 75%;
+}
+
+/* Style pour gérer la page qui permet de voir tous les produits */
+
+/* Style pour gérer les images de la page présentant tous les produits */
+
+.img-all-products{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.img-all-products-size{
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* Style pour gérer la page description du produit */
+
+.img-product{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.img-product-size{
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+/* Style pour gérer la page contact */
+
+/* Style pour le formulaire */
+
+.form-contact-style{
+    background: rgba(20, 20, 20, 0.7) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+/* Style pour gérer le style de la page panier */
+
+.panier-style-red{
+    background: linear-gradient(90deg, rgba(0,0,0, 0.7) 5%, rgba(154,0,0, 0.7) 50%, rgba(0,0,0, 0.7) 95%, rgb(0,0,0, 0.7)) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.panier-style-blue{
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 5%, rgba(40,18,107,0.7) 50%, rgba(0,0,0, 0.7) 95%, rgb(0,0,0, 0.7)) !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: "Cabin", sans-serif !important;
+}
+
+.underline-panier{
+    border-bottom: 2px solid white !important;
+}
+
+/* Style pour gérer les images des articles du panier du panier */
+
+/* Bannière du panier si celui-ci est vide */
+
+.banner-panier{
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-panier-size{
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+/* Images des articles du panier */
+
+.img-panier{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.img-panier-size{
+    background: rgb(154,0,0);
+    background: linear-gradient(90deg, rgba(154,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(40,18,107,1) 95%);
+    border-radius: 15px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}

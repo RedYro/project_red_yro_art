@@ -1,0 +1,350 @@
+@media screen and (max-width: 576px) {
+    /* Pour gérer la navbar en col-sm-X */
+
+    .offcanvas.offcanvas-start {
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+        transform: translateX(-100%);
+    }
+
+    .bg-offcanvas-blue{
+        background: var(--background-gradient-blue-2), var(--background-color-black) !important;
+    }
+
+    .bg-offcanvas-red{
+        background: var(--background-gradient-red-2), var(--background-color-black) !important;
+    }
+
+    .logo-show{
+        display: block !important;
+    }
+
+    /* Pour gérer les titres h1 h2 etc. du site en responsive */
+
+    .title-size-1{
+        width: 35%;
+    }
+
+    .title-size-2{
+        width: 45%;
+    }
+
+    .title-size-3{
+        width: 65%;
+    }
+
+    /* Pour gérer les boutons du site en responsive */
+
+    .btn-size-1{
+        width: 35%;
+    }
+    
+    .btn-size-2{
+        width: 45%;
+    }
+
+    /* Pour gérer la bannière de l'accueil en "col-sm-X" */
+
+    .banner-img-size{
+        width: 420px;
+        height: 325px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer les images aléatoires de l'accueil en "col-sm-X" */
+
+    .random-img-accueil-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 225px;
+        height: 225px;
+        overflow: hidden;
+    }
+
+    .random-img-accueil-bis-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 225px;
+        height: 225px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer les images de tous les produits dans la page "all_products" en "col-sm-X" */
+
+    .img-all-products-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer l'image de la description du produit en "col-sm-X" */
+
+    .img-product-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer les images des produits du panier en "col-sm-X" */
+
+    .img-panier-size{
+        background: rgb(154,0,0);
+        background: linear-gradient(90deg, rgba(154,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(40,18,107,1) 95%);
+        border-radius: 15px;
+        padding: 1rem 2rem 0 2rem;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du panier si il est vide en "col-sm-X" */
+
+    .banner-panier-size{
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du dashboard en "col-sm-X" */
+
+    .banner-dashboard-img-size{
+        background: linear-gradient(to right, rgba(40,18,107,1), black, rgb(154,0,0)); 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* Pour gérer la navbar en col-md-X */
+
+    .offcanvas.offcanvas-start {
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+        transform: translateX(-100%);
+    }
+
+    .bg-offcanvas-blue{
+        background: var(--background-gradient-blue-2), var(--background-color-black) !important;
+    }
+
+    .bg-offcanvas-red{
+        background: var(--background-gradient-red-2), var(--background-color-black) !important;
+    }
+
+    .logo-show{
+        display: block !important;
+    }
+
+    /* Pour gérer les titres h1 h2 etc. du site en responsive */
+
+    .title-size-1{
+        width: 35%;
+    }
+
+    .title-size-2{
+        width: 45%;
+    }
+
+    .title-size-3{
+        width: 65%;
+    }
+
+    /* Pour gérer les boutons du site en responsive */
+
+    .btn-size-1{
+        width: 35%;
+    }
+    
+    .btn-size-2{
+        width: 45%;
+    }
+
+    /* Pour gérer la bannière de l'accueil en "col-md-X" */
+
+    .banner-img-size{
+        width: 520px;
+        height: 425px;
+        overflow: hidden;
+    }
+
+    .random-img-accueil-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 325px;
+        height: 325px;
+        overflow: hidden;
+    }
+
+    .random-img-accueil-bis-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 325px;
+        height: 325px;
+        overflow: hidden;
+    }
+
+        /* Pour gérer les images de tous les produits dans la page "all_products" en "col-sm-X" */
+
+    .img-all-products-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer l'image de la description du produit en "col-sm-X" */
+
+    .img-product-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer les images des produits du panier en "col-sm-X" */
+
+    .img-panier-size{
+        background: rgb(154,0,0);
+        background: linear-gradient(90deg, rgba(154,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(40,18,107,1) 95%);
+        border-radius: 15px;
+        padding: 1rem 2rem 0 2rem;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du panier si il est vide en "col-sm-X" */
+
+    .banner-panier-size{
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du dashboard en "col-sm-X" */
+
+    .banner-dashboard-img-size{
+        background: linear-gradient(to right, rgba(40,18,107,1), black, rgb(154,0,0)); 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+    /* Pour gérer les images de tous les produits dans la page "all_products" en "col-sm-X" */
+
+    .img-all-products-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 450px;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer l'image de la description du produit en "col-sm-X" */
+
+    .img-product-size{
+        background: var(--background-color-black);
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(154,0,0), black, rgba(40,18,107,1));
+        border-image-slice: 1; 
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 550px;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer les images des produits du panier en "col-sm-X" */
+
+    .img-panier-size{
+        background: rgb(154,0,0);
+        background: linear-gradient(90deg, rgba(154,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 70%, rgba(40,18,107,1) 95%);
+        border-radius: 15px;
+        padding: 1rem 2rem 0 2rem;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du panier si il est vide en "col-sm-X" */
+
+    .banner-panier-size{
+        width: 600px;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    /* Pour gérer la bannière du dashboard en "col-sm-X" */
+
+    .banner-dashboard-img-size{
+        background: linear-gradient(to right, rgba(40,18,107,1), black, rgb(154,0,0)); 
+        border-radius: 15px;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .8);
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+    }
+}
